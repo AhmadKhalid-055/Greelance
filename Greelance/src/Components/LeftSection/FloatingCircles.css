@@ -1,0 +1,91 @@
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(15px);
+
+    opacity: .6;
+
+    animation: move 8s infinite ease-in-out;
+
+}
+
+.one {
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #00FFD1;
+
+    top: -80px;
+
+    left: -80px;
+
+}
+
+.two {
+
+    width: 280px;
+
+    height: 280px;
+
+    background: #00D5FF;
+
+    right: -100px;
+
+    top: 30px;
+
+}
+
+.three {
+
+    width: 90px;
+
+    height: 90px;
+
+    background: #52FF9D;
+
+    left: 50px;
+
+    top: 200px;
+
+}
+
+.four {
+
+    width: 120px;
+
+    height: 120px;
+
+    background: #39FFD0;
+
+    bottom: 120px;
+
+    right: 100px;
+
+}
+
+@keyframes move {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
