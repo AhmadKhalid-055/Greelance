@@ -1,0 +1,61 @@
+.social {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 20px;
+
+}
+
+.icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    background: white;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.icon:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.linkedIn {
+
+    background: #0077B5;
+
+    color: white;
+
+}
+
+.apple {
+
+    background: black;
+
+    color: white;
+
+}

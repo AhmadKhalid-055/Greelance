@@ -1,0 +1,26 @@
+.customButton {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  background: white;
+  border: 2px solid #D9DFEA;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2F3142;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.customButton:hover {
+  border-color: #2E33C7;
+  background: #F7F9FF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 51, 199, 0.1);
+}
+
+.customButton:active {
+  transform: translateY(0);
+}

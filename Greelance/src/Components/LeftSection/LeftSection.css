@@ -1,0 +1,67 @@
+.left {
+
+    width: 50%;
+    background: #2E33C7;
+
+    position: relative;
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+.left h1 {
+
+    font-size: 72px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    z-index: 5;
+
+}
+
+.caption {
+
+    text-align: center;
+
+    z-index: 5;
+
+}
+
+.caption h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+.caption p {
+
+    color: #63FFAA;
+
+    font-size: 18px;
+
+}
+
+@media(max-width:900px) {
+
+    .left {
+
+        width: 100%;
+        min-height: 900px;
+
+    }
+
+}
