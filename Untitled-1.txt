@@ -1,0 +1,4 @@
+// On click
+// Navigate to: "V1.F1.3 (Verified)";
+// Animate: Instant;
+animation-duration: 0ms;

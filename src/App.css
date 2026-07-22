@@ -546,6 +546,34 @@ body {
     border-radius: 16.88px !important;
 }
 
+/* Validation Error Message */
+.signup-error-msg {
+    position: absolute;
+    top: 518px;
+    left: 60.25px;
+    width: 338.25px;
+    height: auto;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #E53935;
+    z-index: 10;
+    animation: errorSlideIn 0.3s ease-out;
+}
+
+@keyframes errorSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .signup-page-signin {
     top: 609.75px !important;
     left: 116.5px !important;
@@ -555,4 +583,3829 @@ body {
 
 .signup-page-signin span {
     color: #3038BD !important;
+}
+
+/* ========================================
+   SIGN IN PAGE STYLES
+   ======================================== */
+
+/* Password field wrapper — for eye icon positioning */
+.signin-password-wrapper {
+    position: absolute;
+    top: 360px;
+    left: 48.25px;
+    width: 338.25px;
+    height: 39px;
+    z-index: 10;
+}
+
+.signin-password-input {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding-right: 44px !important;
+}
+
+/* Eye toggle button */
+.eye-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+    transition: opacity 0.2s ease;
+}
+
+.eye-toggle-btn:hover {
+    opacity: 0.7;
+}
+
+/* Forget Password Link */
+.forget-password-link {
+    position: absolute;
+    top: 403.5px;
+    left: 283.75px;
+    width: 106px;
+    height: 18px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #3038BD;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.2s ease;
+}
+
+.forget-password-link:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+/* Sign In Button */
+.signin-btn {
+    top: 510px !important;
+    left: 168.5px !important;
+    width: 99px !important;
+    height: 28.125px !important;
+    background: #3038BD !important;
+    border-radius: 16.88px !important;
+}
+
+/* Sign In Error Message */
+.signin-error-msg {
+    position: absolute;
+    top: 478px;
+    left: 60.25px;
+    width: 338.25px;
+    height: auto;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #E53935;
+    z-index: 10;
+    animation: errorSlideIn 0.3s ease-out;
+}
+
+/* ========================================
+   OTP FULL-SCREEN PAGE STYLES
+   ======================================== */
+
+/* Full-screen OTP page — replaces the left/right split layout */
+.otp-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* OTP Logo — top-left corner */
+.otp-logo-container {
+    position: absolute;
+    top: 37.5px;
+    left: 60px;
+    width: 130.2px;
+    height: 19.61px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otp-logo-img {
+    width: 130.2px;
+    height: 19.61px;
+    object-fit: contain;
+}
+
+/* OTP content wrapper — centers the card on the page */
+.otp-content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* OTP Card — white container */
+.otp-card {
+    position: relative;
+    width: 888px;
+    height: 507.75px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0px 0px 18.75px 0px rgba(34, 211, 166, 0.13);
+}
+
+/* "Enter OTP" title */
+.otp-title {
+    position: absolute;
+    top: 93px;   /* 244.5 - 151.5 = 93px from card top */
+    left: 0;
+    width: 100%;
+    height: 43px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 42.75px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+}
+
+/* Subtitle */
+.otp-subtitle {
+    position: absolute;
+    top: 135.75px;  /* 287.25 - 151.5 = 135.75px from card top */
+    left: 0;
+    width: 100%;
+    height: 18px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+}
+
+/* OTP Digits Group Container */
+.otp-digits-group {
+    position: absolute;
+    top: 210.75px;  /* 362.25 - 151.5 = 210.75px from card top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 482.25px;
+    height: 106.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18.75px;
+}
+
+/* Each OTP Digit Circle */
+.otp-digit-circle {
+    width: 106.5px;
+    height: 106.5px;
+    border-radius: 70.5px;
+    background: #F3F7FF;
+    border: 0.75px solid #D2D4FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.5px 10.5px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.otp-digit-circle:focus-within {
+    border-color: #3038BD;
+    box-shadow: 0 0 0 3px rgba(48, 56, 189, 0.1);
+}
+
+/* OTP Error State — pink circles with red border */
+.otp-digit-circle.otp-error {
+    background: #FDDFDF;
+    border-color: #E53935;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.otp-digit-circle.otp-error:focus-within {
+    border-color: #E53935;
+    box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.12);
+}
+
+/* OTP Error Message — below the circles */
+.otp-error-msg {
+    position: absolute;
+    top: 325px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    animation: errorSlideIn 0.3s ease-out;
+}
+
+.otp-error-msg span {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 11.5px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    color: #E53935;
+}
+
+/* OTP Digit Input */
+.otp-digit-input {
+    width: 85.5px;
+    height: 60px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 43.5px;
+    line-height: 60px;
+    letter-spacing: 0.15px;
+    color: #050A5F;
+    outline: none;
+    caret-color: #3038BD;
+}
+
+.otp-digit-input::placeholder {
+    color: #C8CCE0;
+}
+
+/* OTP Bottom Row — Resend + Timer on left, Submit on right */
+.otp-bottom-row {
+    position: absolute;
+    top: 369.75px;  /* 521.25 - 151.5 = 369.75px from card top */
+    left: 201.75px; /* 477.75 - 276 = 201.75px from card left */
+    right: 57.75px; /* card width 888 - (830.25 - 276 + 99) = right margin */
+    width: calc(100% - 201.75px - 57.75px);
+    height: 46.25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Resend Code + Timer group */
+.otp-resend-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 97px;
+    height: 46.25px;
+}
+
+/* Resend Code text */
+.otp-resend-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+    letter-spacing: 0.15px;
+    color: #4ADF86;
+    cursor: default;
+    opacity: 0.5;
+    user-select: none;
+}
+
+.otp-resend-text.active {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.otp-resend-text.active:hover {
+    text-decoration: underline;
+}
+
+/* Timer text */
+.otp-timer {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22.5px;
+    letter-spacing: 0.15px;
+    text-align: left;
+    color: #050A5F;
+    width: 39px;
+    height: 23px;
+}
+
+/* Submit Button */
+.otp-submit-btn {
+    width: 99px;
+    height: 28.125px;
+    background: #3038BD;
+    border: none;
+    border-radius: 16.88px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: none;
+    transform-origin: center;
+    align-self: center;
+}
+
+.otp-submit-btn:hover {
+    animation: springHover 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.otp-submit-btn:active {
+    animation: springClick 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Responsive adjustments for OTP page */
+@media (max-width: 950px) {
+    .otp-card {
+        width: 95%;
+        max-width: 888px;
+        height: auto;
+        min-height: 507.75px;
+        padding-bottom: 60px;
+    }
+
+    .otp-digits-group {
+        width: 90%;
+        max-width: 482.25px;
+    }
+
+    .otp-digit-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .otp-digit-input {
+        width: 60px;
+        height: 45px;
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .otp-bottom-row {
+        left: 40px;
+        right: 40px;
+        width: calc(100% - 80px);
+    }
+}
+
+/* ========================================
+   OTP APPROVED (VERIFIED) STYLES
+   ======================================== */
+
+.verified-icon {
+    position: absolute;
+    width: 156px;
+    height: 156px;
+    top: 100.5px; /* 252px - 151.5px */
+    left: 366px;  /* 642px - 276px */
+    background: #E8FBF6; /* Soft green backdrop blending with circular checkmark */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 24px rgba(34, 211, 166, 0.15);
+    animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.verified-title {
+    position: absolute;
+    width: 119px;
+    height: 43px;
+    top: 277.5px; /* 429px - 151.5px */
+    left: 384.75px; /* 660.75px - 276px */
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42.75px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+}
+
+.verified-subtitle {
+    position: absolute;
+    width: 195.75px;
+    height: 18px;
+    top: 320.25px; /* 471.75px - 151.5px */
+    left: 346.5px;  /* 622.5px - 276px */
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+}
+
+.verified-proceed-btn {
+    position: absolute !important;
+    top: 392.25px !important; /* 543.75px - 151.5px */
+    left: 378px !important;    /* 654px - 276px */
+    width: 99px !important;
+    height: 28.125px !important;
+    align-self: unset !important;
+}
+
+@media (max-width: 950px) {
+    .verified-icon {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 120px;
+        top: 60px;
+    }
+    
+    @keyframes scaleIn {
+        from {
+            transform: translateX(-50%) scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(-50%) scale(1);
+            opacity: 1;
+        }
+    }
+
+    .verified-title {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 200px;
+    }
+
+    .verified-subtitle {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 250px;
+        width: 90%;
+    }
+
+    .verified-proceed-btn {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 300px !important;
+    }
+}
+
+/* ========================================
+   UPLOAD RESUME SCREEN STYLES
+   ======================================== */
+
+.upload-resume-page {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Virtual 1440px figma canvas centered */
+.upload-resume-page::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1440px;
+    height: 810px;
+    pointer-events: none;
+}
+
+.top-nav-bar {
+    position: absolute;
+    top: 2.25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 87.75px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.03);
+    z-index: 10;
+}
+
+/* Green Back Button on left */
+.nav-back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 87.75px;
+    height: 87.75px;
+    background: #22D3A6;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.nav-back-btn:hover {
+    background: #1cb891;
+}
+
+/* Steps container */
+.steps-container {
+    position: absolute;
+    top: 0;
+    left: 88px;
+    width: 1180.75px;
+    height: 85.5px;
+    display: flex;
+}
+
+.step-item {
+    width: 236.25px;
+    height: 85.5px;
+    padding: 7.5px 31.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    background: #FFFFFF;
+    border-top: 2.25px solid transparent;
+    transition: background-color 0.2s ease;
+}
+
+.step-item.active {
+    background: #E6EFFF;
+    border-top-color: #3038BD;
+    box-shadow: inset 0px 2.25px 0px 0px #3038BD; /* Ensure matching Figma style line */
+}
+
+.step-label {
+    font-family: 'Lexend', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #22D3A6;
+    text-transform: uppercase;
+}
+
+.step-item:not(.active) .step-label {
+    opacity: 0.7;
+}
+
+.step-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #050A5F;
+}
+
+.step-item:not(.active):not(:nth-child(2)) {
+    opacity: 0.4; /* Grey out upcoming steps 3, 4, 5 */
+}
+
+/* Logout Exit Button */
+.nav-logout-btn {
+    position: absolute;
+    top: 24.375px; /* (87.75 - 39) / 2 */
+    right: 35.5px;
+    width: 39px;
+    height: 39px;
+    border-radius: 71px;
+    background: #FFFFFF;
+    border: 1px solid #E6EFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.nav-logout-btn:hover {
+    background: #F3F7FF;
+    border-color: #D2D4FF;
+    transform: translateY(-1px);
+}
+
+/* Dashed upload container */
+.dashed-upload-box {
+    position: absolute;
+    top: 225.75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 861.75px;
+    height: 358.5px;
+    background: #FFFFFF;
+    border: 1.5px dashed #D2D4FF;
+    border-radius: 7.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashed-upload-box:hover {
+    background: #F8FAFF;
+    border-color: #3038BD;
+}
+
+/* Illustration spacing */
+.upload-illustration {
+    margin-top: 30px;
+    width: 187px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hint text styling */
+.upload-hint-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #8D91A5;
+    margin-top: 15px;
+}
+
+.upload-asterisk {
+    color: #22D3A6;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+/* Uploaded file name indicator */
+.uploaded-file-name {
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    color: #3038BD;
+    margin-top: 8px;
+    background: #E6EFFF;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+/* Buttons row inside dashed box */
+.upload-buttons-row {
+    margin-top: 24px;
+    display: flex;
+    gap: 16.5px;
+}
+
+/* Upload Action Button */
+.upload-action-btn {
+    width: 166.5px;
+    height: 37.5px;
+    background: #3038BD;
+    border: none;
+    border-radius: 16.88px;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.upload-action-btn:hover {
+    background: #252ca3;
+    transform: translateY(-1px);
+    box-shadow: 0px 4px 12px rgba(48, 56, 189, 0.2);
+}
+
+/* Create Manually Button */
+.create-manually-btn {
+    width: 149px;
+    height: 37.6px;
+    background: #E6EFFF;
+    border: 1.13px solid #3038BD;
+    border-radius: 16.88px;
+    color: #3038BD;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.create-manually-btn:hover {
+    background: #D2D4FF;
+    transform: translateY(-1px);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1440px) {
+    .upload-resume-page .top-nav-bar {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+
+    .steps-container {
+        width: calc(100% - 150px);
+    }
+}
+
+@media (max-width: 950px) {
+    .upload-resume-page {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 40px;
+    }
+
+    .steps-container {
+        display: none; /* Hide steps bar on mobile */
+    }
+
+    .dashed-upload-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .nav-logout-btn {
+        right: 15px;
+    }
+}
+
+/* ========================================
+   SETUP PROFILE SCREEN STYLES
+   ======================================== */
+
+.setup-profile-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Virtual 1440px canvas centered */
+.form-canvas-container {
+    position: relative;
+    width: 1440px;
+    height: auto;
+    min-height: 100vh;
+    background: #F7FAFF;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 125.25px;
+    padding-bottom: 60px;
+    gap: 40px;
+}
+
+.section-heading {
+    position: relative;
+    height: 24px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: #050A5F;
+    margin-bottom: 24px;
+}
+
+.red-asterisk {
+    color: #FF5A5A;
+    margin-left: 3px;
+}
+
+/* Since the other headings are inside their respective form-sections,
+   we can position them relatively or absolutely within wrapper elements.
+   Let's check positions: */
+.form-section {
+    position: relative;
+    width: 1320px;
+    border-bottom: 0.75px solid #D2D4FF;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Personal Information Grid Layout */
+.fields-grid {
+    margin-top: 16px; /* reduced since section-heading now has margin-bottom */
+    display: grid;
+    grid-template-columns: repeat(4, 282.75px);
+    column-gap: 56.5px; /* (1320 - (4 * 282.75)) / 3 = 63px. Let's make it grid-template-columns: repeat(4, 1fr) with gap: 63px */
+    grid-template-columns: repeat(4, 282.75px);
+    gap: 22px 63px;
+}
+
+.field-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.field-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #050A5F;
+}
+
+.form-input, .form-select {
+    position: static !important;
+    width: 282.75px !important;
+    height: 39px !important;
+    border-radius: 45px !important;
+    border: 0.75px solid #D2D4FF !important;
+    background: #F3F7FF !important;
+    padding: 4.5px 16px !important;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    color: #050A5F;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-input:focus, .form-select:focus {
+    background: #FFFFFF !important;
+    border-color: #3038BD !important;
+}
+
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 24 24' stroke='%233038BD' stroke-width='2.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 16px center !important;
+    background-size: 12px !important;
+    padding-right: 36px !important;
+}
+
+/* Phone input layout - unified pill-shaped box */
+.phone-input-wrapper {
+    box-sizing: border-box;
+    width: 282.75px !important;
+    height: 39px !important;
+    border-radius: 45px !important;
+    border: 0.75px solid #D2D4FF !important;
+    background: #F3F7FF !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 16px !important;
+    gap: 4px !important;
+    transition: all 0.2s ease;
+}
+
+.phone-input-wrapper:focus-within {
+    background: #FFFFFF !important;
+    border-color: #3038BD !important;
+    box-shadow: 0 4px 12px rgba(48, 56, 189, 0.08);
+}
+
+.phone-country-select-hidden {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 65px !important;
+    height: 100% !important;
+    opacity: 0 !important;
+    cursor: pointer !important;
+    z-index: 20 !important;
+}
+
+.phone-flag-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    position: relative !important;
+    pointer-events: none !important;
+    margin-right: 2px !important;
+}
+
+.phone-flag-img {
+    width: 18px !important;
+    height: 12px !important;
+    object-fit: cover !important;
+    border-radius: 1px !important;
+}
+
+.phone-chevron {
+    width: 8px !important;
+    height: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.phone-country-prefix {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #050A5F;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+.phone-number-field {
+    flex: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px !important;
+    color: #050A5F !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.section-header-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.section-header-row .section-heading {
+    position: static;
+    margin-bottom: 0 !important;
+}
+
+/* Green + Add Buttons */
+.add-item-btn {
+    height: 24px;
+    border-radius: 15px;
+    background: #4ADF86;
+    border: none;
+    cursor: pointer;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.add-item-btn:hover {
+    background: #3ac872;
+}
+
+.add-item-btn span {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #FFFFFF;
+}
+
+.add-btn-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-select.placeholder-active {
+    color: #A0A5BA !important;
+}
+
+.form-select option {
+    color: #050A5F !important;
+    background: #FFFFFF !important;
+}
+
+/* Cards lists */
+.section-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 1316.25px;
+}
+
+/* Light blue info cards */
+.info-card-container {
+    position: relative;
+    width: 1316.25px;
+    background: #E6EFFF;
+    border-radius: 7.5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 24px;
+}
+
+.education-card {
+    height: 110.25px;
+}
+
+.experience-card {
+    height: 260px;
+    gap: 16px;
+}
+
+.certification-card {
+    height: 110.25px;
+}
+
+.portfolio-card {
+    height: 264.75px;
+}
+
+/* Delete button on card */
+.card-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.card-delete-btn:hover {
+    opacity: 1;
+}
+
+/* Card fields rows */
+.card-fields-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+}
+
+.card-fields-row.align-center {
+    align-items: center;
+    height: 100%;
+}
+
+.card-field {
+    flex: 1;
+}
+
+.card-field-double {
+    flex: 2;
+}
+
+.card-field-double input {
+    width: 100% !important;
+}
+
+.card-field select, .card-field input {
+    width: 100% !important;
+}
+
+/* Date range styling */
+.date-range-field {
+    width: 250px;
+}
+
+.date-dropdowns {
+    display: flex;
+    gap: 10px;
+}
+
+.date-select {
+    width: 120px !important;
+}
+
+.date-range-placeholder {
+    width: 250px;
+}
+
+/* Custom checkbox block */
+.checkbox-block {
+    display: flex;
+    align-items: center;
+    height: 39px;
+    margin-bottom: 2px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    color: #050A5F;
+    font-weight: 500;
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 1px solid #3038BD;
+    cursor: pointer;
+}
+
+/* Card textarea row */
+.card-textarea-row {
+    width: 100%;
+}
+
+.textarea-block {
+    width: 100%;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 7.5px;
+    border: 0.75px solid #D2D4FF;
+    background: #F3F7FF;
+    padding: 12px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    color: #050A5F;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-textarea:focus {
+    background: #FFFFFF;
+    border-color: #3038BD;
+    box-shadow: 0 4px 12px rgba(48, 56, 189, 0.08);
+}
+
+/* Certification Upload */
+.cert-upload-wrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.dashed-mini-upload {
+    width: 287.25px;
+    height: 48px;
+    background: #F3F7FF;
+    border: 1.5px dashed #D2D4FF;
+    border-radius: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #050A5F;
+    transition: all 0.2s ease;
+}
+
+.dashed-mini-upload:hover {
+    border-color: #3038BD;
+    background: #FFFFFF;
+}
+
+/* Portfolio grid layout */
+.portfolio-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.portfolio-fields-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.portfolio-fields-col .field-row {
+    display: flex;
+    gap: 24px;
+}
+
+.portfolio-field {
+    flex: 1;
+}
+
+.portfolio-field input {
+    width: 100% !important;
+}
+
+.link-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.link-field {
+    width: 100% !important;
+    padding-right: 32px !important;
+}
+
+.globe-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.portfolio-textarea {
+    height: 100px;
+}
+
+/* Portfolio Right side Upload box */
+.portfolio-upload-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashed-portfolio-upload {
+    width: 280.25px;
+    height: 160px;
+    background: #F3F7FF;
+    border: 1.5px dashed #D2D4FF;
+    border-radius: 7.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.dashed-portfolio-upload:hover {
+    border-color: #3038BD;
+    background: #FFFFFF;
+}
+
+.upload-port-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #050A5F;
+    text-align: center;
+}
+
+.upload-port-hint {
+    font-family: 'Lexend', sans-serif;
+    font-size: 9.5px;
+    color: #8D91A5;
+    text-align: center;
+}
+
+/* Bottom Row Next Button placement */
+.form-bottom-row {
+    position: relative;
+    width: 1320px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.setup-next-btn {
+    position: static !important;
+    width: 99px !important;
+    height: 27.6px !important;
+    align-self: unset !important;
+}
+
+/* Responsiveness for Setup Profile screen */
+@media (max-width: 1440px) {
+    .form-canvas-container {
+        width: 100%;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .form-section {
+        position: static;
+        width: 90%;
+        max-width: 1316px;
+    }
+
+    .section-header-row {
+        width: 100% !important;
+    }
+
+    .fields-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 100%;
+    }
+
+    .info-card-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-fields-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .date-range-field, .date-select {
+        width: 100% !important;
+    }
+
+    .dashed-mini-upload {
+        width: 100%;
+    }
+
+    .portfolio-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashed-portfolio-upload {
+        width: 100%;
+    }
+
+    .form-bottom-row {
+        position: static;
+        width: 90%;
+        max-width: 1316px;
+        margin-top: 20px;
+    }
+}
+
+/* ========================================
+   CHOOSE SKILL SCREEN STYLES (STEP 3)
+   ======================================== */
+
+.choose-skill-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Virtual 1440px canvas centered */
+.skill-canvas-container {
+    position: relative;
+    width: 1440px;
+    height: 810px; /* Adjusted desktop height */
+    background: #F7FAFF;
+    flex-shrink: 0;
+}
+
+.category-title {
+    position: absolute;
+    top: 125.25px;
+    left: 60px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: #050A5F;
+    margin: 0;
+}
+
+.category-subtitle {
+    position: absolute;
+    top: 157.25px;
+    left: 60px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #050A5F;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Category Grid buttons container */
+.category-grid {
+    position: absolute;
+    top: 208.5px;
+    left: 60px;
+    width: 1320px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 7.5px !important;
+}
+
+/* Category item buttons */
+.category-item-btn {
+    box-sizing: border-box !important;
+    height: 55.5px !important;
+    background: #F3F7FF !important;
+    border: 1.5px solid #E0E2FE !important;
+    border-radius: 7.5px !important;
+    padding: 11.25px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 14.25px !important;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-item-btn:hover {
+    border-color: #3038BD !important;
+    background: #E6EFFF !important;
+}
+
+.category-item-btn.selected {
+    background: #E6EFFF !important;
+    border-color: #3038BD !important;
+}
+
+.category-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 33px !important;
+    height: 33px !important;
+}
+
+.category-text {
+    font-family: 'Lexend', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 10.5px !important;
+    line-height: 22px !important;
+    color: #050A5F !important;
+}
+
+/* Bottom next button row - matching mockup */
+.skill-bottom-row {
+    display: none !important; /* Hide the generic container as the button is absolute-positioned */
+}
+
+.skill-next-btn {
+    position: absolute !important;
+    width: 99px !important;
+    height: 28.12px !important;
+    left: 1245.75px !important;
+    top: 702.75px !important;
+    background: #3038BD !important;
+    border-radius: 16.875px !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 9px !important;
+    line-height: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Step 3 Detail/Subcategory View Styles */
+.skill-canvas-container.detail-view {
+    position: relative;
+    width: 1440px;
+    height: auto;
+    min-height: 810px;
+    background: #F7FAFF;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 125.25px;
+    padding-left: 60px;
+    padding-bottom: 80px;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.detail-section {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.detail-heading {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.08px;
+    color: #050A5F;
+    margin: 0 0 12px 0;
+}
+
+.detail-subtitle {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #050A5F;
+    opacity: 0.8;
+    margin: 0 0 16px 0;
+}
+
+/* Selected Category Card */
+.selected-category-pill {
+    width: 282.75px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #D2D4FF;
+    border-radius: 7.5px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.selected-category-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selected-category-left .category-icon {
+    font-size: 16px;
+}
+
+.selected-category-left .category-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #050A5F;
+}
+
+.category-pill-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.category-pill-close-btn:hover svg path {
+    stroke: #ff5a5a;
+}
+
+/* Subcategory Pills Row */
+.subcategory-pills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+}
+
+.subcategory-pill-btn {
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #D2D4FF;
+    border-radius: 7.5px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #3038BD;
+    transition: all 0.2s ease;
+}
+
+.subcategory-pill-btn:hover {
+    border-color: #3038BD;
+    background: #F3F7FF;
+}
+
+.subcategory-pill-btn.selected {
+    background: #3038BD;
+    border-color: #3038BD;
+    color: #FFFFFF;
+}
+
+/* Skills Dropdown Section */
+.skills-dropdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.custom-dropdown-wrapper {
+    position: relative;
+    width: 282.75px;
+    box-sizing: border-box;
+}
+
+.custom-dropdown-header {
+    height: 39px;
+    border: 1px solid #D2D4FF;
+    border-radius: 7.5px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    color: #050A5F;
+    box-sizing: border-box;
+}
+
+.dropdown-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+    transform: rotate(180deg);
+}
+
+.custom-dropdown-options-list {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E6EFFF;
+    border-radius: 7.5px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+.custom-dropdown-option-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    box-sizing: border-box;
+}
+
+.custom-dropdown-option-row:hover {
+    background: #F3F7FF;
+}
+
+.custom-dropdown-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid #D2D4FF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.custom-dropdown-checkbox.checked {
+    background: #4ADF86;
+    border-color: #4ADF86;
+}
+
+.custom-dropdown-option-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 13px;
+    color: #050A5F;
+}
+
+.skills-hint-notice {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #8D91A5;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+/* Suggest Missing Skill Input & Tags */
+.suggest-input-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.suggest-missing-input {
+    width: 282.75px;
+    height: 39px;
+    border: 1px solid #D2D4FF;
+    border-radius: 7.5px;
+    outline: none;
+    background: #FFFFFF;
+}
+
+.suggested-pills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.suggested-green-pill {
+    background: #4ADF86;
+    color: #FFFFFF;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 18px;
+    border-radius: 7.5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(74, 223, 134, 0.2);
+    transition: all 0.2s ease;
+}
+
+.suggested-green-pill:hover {
+    background: #3ac872;
+    transform: translateY(-1px);
+}
+
+/* ========================================
+   CONNECT WALLET SCREEN STYLES (STEP 4)
+   ======================================== */
+.connect-wallet-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.wallet-canvas-container {
+    position: relative;
+    width: 1440px;
+    height: 810px;
+    background: #F7FAFF;
+    flex-shrink: 0;
+}
+
+.wallet-title {
+    position: absolute;
+    width: 644px;
+    height: 24px;
+    left: 60px;
+    top: 121px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.075px;
+    color: #050A5F;
+    margin: 0;
+}
+
+.wallet-subtitle {
+    position: absolute;
+    width: 644px;
+    height: 18px;
+    left: 60px;
+    top: 149.5px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    color: #050A5F;
+    margin: 0;
+}
+
+.wallet-options-row {
+    position: absolute;
+    left: 60px;
+    top: 202.75px;
+    display: flex;
+    gap: 19.5px;
+}
+
+.wallet-card-btn {
+    box-sizing: border-box !important;
+    width: 139.5px !important;
+    height: 139.5px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    cursor: pointer;
+    border-radius: 7.5px !important;
+    overflow: hidden !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none !important;
+}
+
+.wallet-card-btn:hover {
+    transform: scale(1.03) !important;
+}
+
+.wallet-card-btn.selected {
+    box-shadow: 0 0 0 2px #3038BD !important;
+}
+
+.wallet-card-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.wallet-fields-row {
+    position: absolute;
+    left: 60px;
+    top: 377.5px;
+    display: flex;
+    gap: 23.25px;
+}
+
+.wallet-field-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+    width: 282.75px;
+    align-items: flex-start;
+}
+
+.wallet-field-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.15px;
+    color: #050A5F;
+    margin: 0;
+}
+
+.wallet-input-box {
+    box-sizing: border-box;
+    width: 282.75px;
+    height: 39px;
+    background: #F3F7FF;
+    border: 0.75px solid #D2D4FF;
+    border-radius: 45px;
+    padding: 4.5px 16px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    color: #050A5F;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.wallet-input-box::placeholder {
+    color: #ADAFDD;
+}
+
+.wallet-input-box:focus {
+    border-color: #3038BD;
+    background: #FFFFFF;
+}
+
+.wallet-bottom-row {
+    display: none !important;
+}
+
+.wallet-next-btn {
+    position: absolute !important;
+    width: 99px !important;
+    height: 28.12px !important;
+    left: 1245.75px !important;
+    top: 702.75px !important;
+    background: #3038BD !important;
+    border-radius: 16.875px !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 9px !important;
+    line-height: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* ========================================
+   COMPLETE PROFILE SCREEN STYLES (STEP 5)
+   ======================================== */
+.complete-profile-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #F7FAFF;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-canvas-container {
+    position: relative;
+    width: 1006.5px;
+    height: 530.25px;
+    background: #FFFFFF;
+    border-radius: 22.5px;
+    box-shadow: 0px 0px 18.75px 0px rgba(34, 211, 166, 0.13);
+    margin-top: 151.5px;
+    flex-shrink: 0;
+}
+
+.profile-title {
+    position: absolute;
+    width: 100%;
+    height: 43px;
+    top: 77.25px;
+    left: 0;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42.75px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+    margin: 0;
+}
+
+.profile-subtitle {
+    position: absolute;
+    width: 100%;
+    height: 18px;
+    top: 120px;
+    left: 0;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    color: #050A5F;
+    margin: 0;
+}
+
+.profile-picture-section {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-upload-dashed-box {
+    box-sizing: border-box;
+    width: 282px;
+    height: 51px;
+    border-radius: 7.5px;
+    border: 1.5px dashed #D2D4FF;
+    background: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    transition: all 0.2s ease-out;
+}
+
+.profile-upload-dashed-box:hover {
+    border-color: #3038BD;
+    background: #F3F7FF;
+}
+
+.profile-upload-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #E6EFFF;
+    border-radius: 4px;
+}
+
+.profile-upload-main-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;
+    color: #050A5F;
+    margin: 0 12px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.profile-upload-tray-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-upload-sub-label-outside {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 9.75px;
+    line-height: 14px;
+    color: #ADAFDD;
+    margin-top: 7.5px;
+    display: block;
+    text-align: center;
+}
+
+.asterisk-green {
+    color: #22D3A6;
+    font-weight: 600;
+    margin-right: 2px;
+}
+
+/* Uploaded profile circle layout */
+.profile-pic-preview-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-pic-circle-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(34, 211, 166, 0.25);
+}
+
+.profile-pic-edit-pencil-btn {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 0.75px solid #E0E2FE;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profile-pic-edit-pencil-btn:hover {
+    background: #E6EFFF;
+    border-color: #3038BD;
+    transform: scale(1.05);
+}
+
+/* About Label & Button row */
+.profile-about-header-row {
+    position: absolute;
+    top: 305px;
+    left: 24px;
+    width: 958.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-about-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #050A5F;
+}
+
+.modify-ai-btn {
+    box-sizing: border-box;
+    width: 104px;
+    height: 20px;
+    background: #E6EFFF;
+    border: 0.84px solid #3038BD;
+    border-radius: 16.88px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+    color: #3038BD;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modify-ai-btn:hover {
+    background: #3038BD;
+    color: #FFFFFF;
+}
+
+.profile-about-textarea {
+    box-sizing: border-box;
+    position: absolute;
+    top: 335px;
+    left: 24px;
+    width: 958.5px;
+    height: 80.25px;
+    background: #F3F7FF;
+    border: 0.75px solid #E0E2FE;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    color: #050A5F;
+    outline: none;
+    resize: none;
+    transition: all 0.2s ease;
+}
+
+.profile-about-textarea:focus {
+    background: #FFFFFF;
+    border-color: #3038BD;
+    box-shadow: 0px 4px 12px rgba(48, 56, 189, 0.05);
+}
+
+.profile-bottom-row {
+    position: absolute;
+    top: 455px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-preview-btn {
+    position: static !important;
+    width: 99px !important;
+    height: 27.6px !important;
+    border-radius: 16.88px !important;
+    background: #3038BD !important;
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px !important;
+    border: none;
+    cursor: pointer;
+}
+
+/* Success Toast Notification */
+.profile-toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+}
+
+.toast-content {
+    display: flex;
+    align-items: center;
+    background: #E6FFFA;
+    border: 1px solid #B2F5EA;
+    border-radius: 8px;
+    padding: 12px 18px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.toast-checkmark-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.toast-text-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+}
+
+.toast-main-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #005648;
+}
+
+.toast-sub-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 10.5px;
+    color: #005648;
+    margin-top: 1px;
+}
+
+.toast-time {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: #005648;
+    opacity: 0.6;
+    margin-right: 12px;
+}
+
+.toast-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+/* Animations for Toast */
+.toast-slide-in {
+    animation: toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast-slide-out {
+    animation: toastSlideOut 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes toastSlideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+}
+
+/* Edit Profile Picture Modal Overlay Backdrop */
+.profile-overlay-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 10, 95, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInModal 0.25s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.profile-modal-container {
+    position: relative;
+    width: 717px;
+    height: 465px;
+    background: #F7FAFF;
+    border-radius: 7.5px;
+    box-shadow: 0px 10px 30px rgba(5, 10, 95, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: scaleInModal 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes scaleInModal {
+    from { transform: scale(0.9) translateY(10px); }
+    to { transform: scale(1) translateY(0); }
+}
+
+.modal-header {
+    height: 54px;
+    background: #FFFFFF;
+    border-bottom: 0.75px solid #E0E2FE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 33px;
+    flex-shrink: 0;
+}
+
+.modal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.modal-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22.5px;
+    color: #050A5F;
+}
+
+.modal-error-badge {
+    display: flex;
+    align-items: center;
+    background: #FFECEB;
+    border-radius: 4px;
+    padding: 2px 8px;
+    gap: 6px;
+}
+
+.modal-error-exclamation {
+    width: 14px;
+    height: 14px;
+    background: #E53935;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-error-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #E53935;
+    text-decoration: underline;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: transform 0.2s ease;
+}
+
+.modal-close-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Body */
+.modal-body {
+    flex: 1;
+    display: flex;
+    padding: 24px 33px;
+    box-sizing: border-box;
+    gap: 40px;
+}
+
+.modal-body-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280.5px;
+}
+
+.modal-crop-circle-container {
+    position: relative;
+    width: 280.5px;
+    height: 280.5px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #E0E2FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(5, 10, 95, 0.05);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.modal-crop-circle-container.error-state {
+    border: 3px solid #E53935 !important;
+}
+
+.crop-img-blurred {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: blur(6px) !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 1 !important;
+    transition: transform 0.1s ease-out;
+}
+
+.crop-img-clear {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: none !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 2 !important;
+    clip-path: ellipse(29% 42% at 50% 50%) !important;
+    -webkit-clip-path: ellipse(29% 42% at 50% 50%) !important;
+    transition: transform 0.1s ease-out;
+}
+
+.modal-crop-placeholder {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #ADAFDD;
+    z-index: 5;
+}
+
+/* Red error state dashed oval inside circle */
+.crop-dashed-oval {
+    position: absolute !important;
+    width: 58% !important;
+    height: 84% !important;
+    border: 2px dashed #FFFFFF !important;
+    border-radius: 50% !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+    left: 21% !important;
+    top: 8% !important;
+}
+
+/* Zoom Slider */
+.modal-zoom-container {
+    margin-top: 15px;
+    width: 252px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.zoom-label {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #050A5F;
+    text-align: left;
+    margin-left: 2px;
+}
+
+.zoom-slider-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+}
+
+.zoom-adjust-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.zoom-range-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #E0E2FE;
+    border-radius: 2px;
+    outline: none;
+}
+
+/* Range slider track and thumb */
+.zoom-range-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: linear-gradient(to right, #22D3A6 0%, #22D3A6 100%);
+    border-radius: 2px;
+}
+
+.zoom-range-slider::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+    border: 0.5px solid #E0E2FE;
+}
+
+/* Trash Bin Button */
+.modal-trash-btn {
+    position: absolute !important;
+    bottom: 24px !important;
+    left: 33px !important;
+    background: none !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.modal-trash-btn:hover {
+    transform: scale(1.1) !important;
+}
+
+.modal-trash-btn:hover svg {
+    stroke: #E53935;
+}
+
+/* Modal Right Side Instructions & Previews */
+.modal-body-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.modal-instructions-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-instructions-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #050A5F;
+    margin: 0;
+}
+
+.modal-instructions-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #050A5F;
+    margin: 0;
+    max-width: 299.25px;
+}
+
+.modal-small-previews-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.small-preview-circle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-preview-circle {
+    border-radius: 50%;
+    overflow: hidden;
+    background: #E0E2FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 8px rgba(5, 10, 95, 0.05);
+}
+
+.small-preview-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Simulation Switcher */
+.simulation-error-toggle {
+    margin-top: 12px;
+}
+
+.toggle-error-state-btn {
+    background: #FFFFFF;
+    border: 1px solid #D2D4FF;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: #050A5F;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle-error-state-btn:hover {
+    background: #F3F7FF;
+    border-color: #3038BD;
+}
+
+/* Modal Save Button */
+.modal-save-btn {
+    position: absolute !important;
+    bottom: 24px !important;
+    right: 33px !important;
+    width: 99px !important;
+    height: 28px !important;
+    border-radius: 16.88px !important;
+    background: #3038BD !important;
+    color: #FFFFFF !important;
+    font-family: 'Lexend', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+}
+
+.modal-save-btn:hover {
+    background: #252BB0 !important;
+}
+
+.modal-save-btn.disabled {
+    background: #D0D2ED !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+/* Responsiveness for Step 3 screen */
+@media (max-width: 1440px) {
+    .skill-canvas-container {
+        width: 100%;
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .skill-canvas-container.detail-view {
+        width: 100%;
+        height: auto;
+        padding-top: 120px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .category-title, .category-subtitle, .category-grid, .skill-bottom-row {
+        position: static;
+        width: 90%;
+        max-width: 1320px;
+    }
+
+    .category-grid {
+        justify-content: center;
+    }
+
+    .skill-bottom-row {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Connect Wallet Responsive (Step 4) */
+    .wallet-canvas-container {
+        width: 100%;
+        height: auto;
+        padding-top: 120px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .wallet-title, .wallet-subtitle, .wallet-options-row, .wallet-fields-row, .wallet-bottom-row {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .wallet-options-row {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .wallet-fields-row {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .wallet-bottom-row {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* Complete Profile Responsive (Step 5) */
+    .profile-canvas-container {
+        width: 100%;
+        height: auto;
+        padding-top: 120px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+    .profile-title, .profile-subtitle, .profile-picture-section, .profile-about-header-row, .profile-about-textarea, .profile-bottom-row {
+        position: static !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 958.5px;
+    }
+
+    .profile-title {
+        text-align: center !important;
+        height: auto !important;
+        font-size: 24px !important;
+    }
+
+    .profile-subtitle {
+        text-align: center !important;
+        height: auto !important;
+        font-size: 12px !important;
+    }
+
+    .profile-about-header-row {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        margin-top: 12px !important;
+    }
+
+    .profile-about-textarea {
+        height: 120px !important;
+    }
+
+    .profile-bottom-row {
+        justify-content: center !important;
+        margin-top: 10px !important;
+    }
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATIONS FOR MOBILE VIEWPORTS (WIDTH <= 500PX)
+   ========================================================================== */
+@media (max-width: 500px) {
+    /* 1. Base Structure & Landing Page Styles */
+    .landing {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .left {
+        display: none !important;
+    }
+    .right {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100vh !important;
+        padding: 20px 12px 40px 12px !important;
+        justify-content: center !important;
+    }
+    .right-content-wrapper {
+        width: 100% !important;
+        max-width: 360px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Signup Card & Page Overlay */
+    .signupCard, .page-overlay {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 30px 16px 35px 16px !important;
+        margin-top: 90px !important; /* Spacing below the absolutely placed logo */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        position: absolute !important;
+        top: 25px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 170px !important;
+        height: auto !important;
+    }
+    .logo-img {
+        width: 170px !important;
+        height: auto !important;
+    }
+
+    .welcome {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px !important;
+        line-height: 16px !important;
+    }
+
+    .options-group {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .customButton {
+        width: 100% !important;
+        margin-bottom: 6px !important;
+    }
+
+    .nextButton {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin: 15px 0 !important;
+        width: 100% !important;
+        height: 38px !important;
+        border-radius: 20px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signin {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        justify-content: center !important;
+    }
+
+    .socialText {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+
+    .social {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Signup / Signin page specific fields */
+    .signup-title-new {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 16px !important;
+    }
+
+    .input-label {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 4px !important;
+        margin-top: 10px !important;
+        text-align: left !important;
+    }
+
+    .input-box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 2px !important;
+    }
+
+    .signin-password-wrapper {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+    }
+    .signin-password-input {
+        width: 100% !important;
+    }
+
+    .validation-note {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 8px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .signup-error-msg, .signin-error-msg {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin: 8px 0 !important;
+    }
+
+    .forget-password-link {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        text-align: right !important;
+        margin-top: 6px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* 2. OTP Screen Styles */
+    .otp-page {
+        padding: 20px 10px !important;
+        min-height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .otp-logo-container {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+        display: flex;
+        justify-content: center;
+    }
+    .otp-logo-img {
+        width: 170px !important;
+        height: auto !important;
+    }
+    .otp-content-wrapper {
+        width: 100% !important;
+        max-width: 360px !important;
+        height: auto !important;
+    }
+    .otp-card {
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 30px 16px 35px 16px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .otp-title {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        font-size: 22px !important;
+        margin-bottom: 6px !important;
+        text-align: center !important;
+    }
+    .otp-subtitle {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        font-size: 11px !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+    .otp-digits-group {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        height: auto !important;
+        gap: 8px !important;
+        margin-bottom: 20px !important;
+        justify-content: center !important;
+    }
+    .otp-digit-circle {
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50% !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    .otp-digit-input {
+        font-size: 18px !important;
+        text-align: center !important;
+        padding: 0 !important;
+    }
+    .otp-error-msg {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        margin-bottom: 16px !important;
+        font-size: 10px !important;
+    }
+    .otp-bottom-row {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+    }
+    .otp-resend-group {
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+    .otp-submit-btn {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        max-width: 120px !important;
+        height: 35px !important;
+        border-radius: 20px !important;
+    }
+
+    /* Verified success state */
+    .verified-icon {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        margin-bottom: 15px !important;
+        width: 60px !important;
+        height: 60px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .verified-icon svg {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .verified-title {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin-bottom: 6px !important;
+        text-align: center !important;
+    }
+    .verified-subtitle {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+    .verified-proceed-btn {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    /* 3. Steps Navigation Bar */
+    .top-nav-bar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 60px !important;
+        background: #FFFFFF !important;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.03) !important;
+        z-index: 100 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        transform: none !important;
+        padding: 0 !important;
+    }
+    .nav-back-btn {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 50px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: #22D3A6 !important;
+        flex-shrink: 0 !important;
+    }
+    .nav-logout-btn {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        margin-right: 12px !important;
+        border: 1px solid #E6EFFF !important;
+        background: #FFFFFF !important;
+    }
+    .steps-container {
+        display: flex !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        flex-grow: 1 !important;
+        height: 60px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        scroll-behavior: smooth !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 0 !important;
+        padding: 0 8px !important;
+        scrollbar-width: none !important; /* Firefox */
+    }
+    .steps-container::-webkit-scrollbar {
+        display: none !important; /* Chrome, Safari */
+    }
+    .step-item {
+        display: inline-flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: auto !important;
+        height: 60px !important;
+        padding: 0 16px !important;
+        flex-shrink: 0 !important;
+        border-top: none !important;
+        border-bottom: 2px solid transparent !important;
+    }
+    .step-item.active {
+        border-bottom-color: #3038BD !important;
+        background: #E6EFFF !important;
+        box-shadow: none !important;
+    }
+    .step-label {
+        font-size: 8px !important;
+        line-height: 10px !important;
+        margin-bottom: 2px !important;
+    }
+    .step-title {
+        font-size: 10px !important;
+        line-height: 12px !important;
+    }
+
+    /* 4. Step 1 (Upload Resume Screen) */
+    .upload-resume-page {
+        padding-top: 70px !important;
+        min-height: 100vh !important;
+    }
+    .resume-main-container {
+        width: 95% !important;
+        max-width: 360px !important;
+        margin: 10px auto 0 auto !important;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .upload-title {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        font-size: 18px !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+    .upload-subtitle {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        font-size: 11px !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+    .dashed-upload-box {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: 160px !important;
+        padding: 15px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .upload-icon-circle {
+        width: 45px !important;
+        height: 45px !important;
+        margin-bottom: 10px !important;
+    }
+    .upload-box-text {
+        font-size: 12px !important;
+        margin-bottom: 4px !important;
+    }
+    .upload-box-subtext {
+        font-size: 9px !important;
+    }
+    .upload-buttons-row {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+        align-items: center !important;
+        margin-top: 20px !important;
+    }
+    .upload-action-btn {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 260px !important;
+        height: 38px !important;
+        font-size: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+    .create-manually-btn {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 260px !important;
+        height: 38px !important;
+        font-size: 12px !important;
+        margin-top: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* 5. Step 2 (Setup Profile Screen) */
+    .form-canvas-container {
+        padding-top: 80px !important;
+        padding-bottom: 30px !important;
+        gap: 16px !important;
+    }
+    .form-section {
+        width: 95% !important;
+        padding: 16px 12px !important;
+        border-radius: 12px !important;
+        margin-bottom: 20px !important;
+    }
+    .form-section.empty-section {
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .section-heading {
+        font-size: 16px !important;
+        margin-bottom: 16px !important;
+        text-align: left !important;
+    }
+    .fields-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+    .field-block {
+        width: 100% !important;
+    }
+    .field-label {
+        font-size: 11px !important;
+        margin-bottom: 4px !important;
+    }
+    .form-input, .form-select {
+        height: 35px !important;
+        font-size: 12px !important;
+    }
+
+    /* Card additions styles (Education, Experience) */
+    .card-fields-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    .card-field, .card-field-double {
+        width: 100% !important;
+    }
+    .date-range-field {
+        width: 100% !important;
+    }
+    .date-dropdowns {
+        gap: 8px !important;
+    }
+    .date-select {
+        width: 100% !important;
+    }
+    .info-card-container {
+        padding: 24px 12px 16px 12px !important;
+        margin-bottom: 12px !important;
+    }
+    .card-delete-btn {
+        top: 6px !important;
+        right: 6px !important;
+    }
+    .section-header-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        margin-bottom: 12px !important;
+    }
+    .add-item-btn {
+        width: 100% !important;
+        height: 36px !important;
+        border-radius: 18px !important;
+        font-size: 11px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 8px !important;
+        padding: 0 !important;
+    }
+    .add-item-btn span {
+        font-size: 11px !important;
+        color: #FFFFFF !important;
+        display: inline-block !important;
+    }
+    
+    /* Portfolio and File Upload blocks */
+    .portfolio-content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .portfolio-fields-col {
+        width: 100% !important;
+    }
+    .portfolio-upload-col {
+        width: 100% !important;
+    }
+    .dashed-portfolio-upload {
+        width: 100% !important;
+        height: 100px !important;
+        padding: 10px !important;
+    }
+    .form-bottom-row {
+        width: 95% !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+    .setup-next-btn {
+        width: 120px !important;
+        height: 35px !important;
+        border-radius: 20px !important;
+    }
+
+    /* 6. Step 3 (Choose Skill Screen) */
+    .skill-canvas-container {
+        padding-top: 70px !important;
+        padding-bottom: 30px !important;
+        gap: 12px !important;
+    }
+    .category-title {
+        font-size: 18px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    .category-subtitle {
+        font-size: 11px !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+        gap: 8px !important;
+        width: 95% !important;
+        padding: 0 4px !important;
+    }
+    .category-item-btn {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+        height: 36px !important;
+        gap: 6px !important;
+        justify-content: flex-start !important;
+    }
+    .category-icon {
+        font-size: 13px !important;
+    }
+    .skill-bottom-row {
+        width: 95% !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+    .skill-next-btn {
+        width: 120px !important;
+        height: 35px !important;
+        border-radius: 20px !important;
+    }
+
+    /* Mobile Detail View Choose Skill Overrides */
+    .skill-canvas-container.detail-view {
+        padding-top: 80px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-bottom: 40px !important;
+        gap: 20px !important;
+    }
+    .selected-category-pill {
+        width: 100% !important;
+    }
+    .custom-dropdown-wrapper {
+        width: 100% !important;
+    }
+    .custom-dropdown-header {
+        height: 35px !important;
+        font-size: 12px !important;
+    }
+    .suggest-missing-input {
+        width: 100% !important;
+        height: 35px !important;
+    }
+    .subcategory-pills-row {
+        gap: 8px !important;
+    }
+    .subcategory-pill-btn {
+        height: 32px !important;
+        font-size: 11px !important;
+        padding: 0 10px !important;
+        border-radius: 6px !important;
+    }
+    .suggested-green-pill {
+        font-size: 10px !important;
+        padding: 6px 12px !important;
+    }
+    .detail-heading {
+        font-size: 16px !important;
+        margin-bottom: 8px !important;
+    }
+    .detail-subtitle {
+        font-size: 11px !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* 7. Step 4 (Connect Wallet Screen) */
+    .wallet-canvas-container {
+        padding-top: 80px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-bottom: 40px !important;
+        gap: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .wallet-title {
+        font-size: 18px !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+    .wallet-subtitle {
+        font-size: 11px !important;
+        text-align: left !important;
+        width: 100% !important;
+        line-height: 16px !important;
+    }
+    .wallet-options-row {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+    }
+    .wallet-card-btn {
+        width: calc(33.33% - 7px) !important;
+        height: 100px !important;
+        border-radius: 6px !important;
+    }
+    .wallet-icon-wrapper {
+        margin-top: 15px !important;
+        height: 30px !important;
+    }
+    .wallet-icon-wrapper svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .wallet-card-label {
+        margin-top: 15px !important;
+        font-size: 12px !important;
+    }
+    .wallet-fields-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+    .wallet-field-block {
+        width: 100% !important;
+        gap: 6px !important;
+    }
+    .wallet-field-label {
+        font-size: 11px !important;
+    }
+    .wallet-input-box {
+        width: 100% !important;
+        height: 35px !important;
+    }
+    .wallet-bottom-row {
+        width: 100% !important;
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+    .wallet-next-btn {
+        width: 120px !important;
+        height: 35px !important;
+        border-radius: 20px !important;
+    }
+
+    /* 8. Step 5 (Complete Profile Screen Mobile) */
+    .profile-canvas-container {
+        padding-top: 80px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-bottom: 40px !important;
+        gap: 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .profile-title {
+        font-size: 18px !important;
+    }
+
+    .profile-subtitle {
+        font-size: 11px !important;
+        line-height: 16px !important;
+    }
+
+    .profile-picture-section {
+        margin: 10px 0 !important;
+    }
+
+    .profile-upload-dashed-box {
+        width: 250px !important;
+        height: 50px !important;
+    }
+
+    .profile-upload-main-label {
+        font-size: 12px !important;
+    }
+
+    .profile-upload-sub-label {
+        font-size: 9px !important;
+    }
+
+    .profile-about-header-row {
+        width: 100% !important;
+        margin-top: 5px !important;
+    }
+
+    .profile-about-textarea {
+        width: 100% !important;
+        height: 100px !important;
+        font-size: 11px !important;
+    }
+
+    .profile-toast-container {
+        left: 15px !important;
+        right: 15px !important;
+        bottom: 15px !important;
+    }
+
+    .toast-content {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    .toast-text-block {
+        margin-right: 10px !important;
+    }
+
+    /* Modal Overlay Mobile Adjustments */
+    .profile-modal-container {
+        width: 92vw !important;
+        height: 90vh !important;
+        max-height: 600px !important;
+        border-radius: 8px !important;
+    }
+
+    .modal-header {
+        padding: 0 15px !important;
+        height: 45px !important;
+    }
+
+    .modal-title {
+        font-size: 13px !important;
+    }
+
+    .modal-error-badge {
+        gap: 4px !important;
+        padding: 1px 6px !important;
+    }
+
+    .modal-error-text {
+        font-size: 9px !important;
+        max-width: 140px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .modal-body {
+        flex-direction: column !important;
+        padding: 15px !important;
+        gap: 15px !important;
+        overflow-y: auto !important;
+    }
+
+    .modal-body-left {
+        width: 100% !important;
+    }
+
+    .modal-crop-circle-container {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .crop-dashed-oval {
+        width: 110px !important;
+        height: 145px !important;
+        border-width: 1.5px !important;
+    }
+
+    .modal-zoom-container {
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    .zoom-slider-row {
+        width: 100% !important;
+    }
+
+    .modal-trash-btn {
+        margin-top: 10px !important;
+    }
+
+    .modal-body-right {
+        width: 100% !important;
+        gap: 12px !important;
+        align-items: center !important;
+    }
+
+    .modal-instructions-block {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .modal-instructions-text {
+        font-size: 9.5px !important;
+        max-width: 100% !important;
+    }
+
+    .modal-small-previews-row {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 5px !important;
+    }
+
+    .small-preview-circle-wrapper {
+        transform: scale(0.85) !important;
+    }
+
+    .simulation-error-toggle {
+        margin-top: 5px !important;
+    }
+
+    .modal-save-btn {
+        align-self: center !important;
+        width: 100% !important;
+        height: 35px !important;
+        margin-top: 10px !important;
+    }
 }
